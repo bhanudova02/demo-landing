@@ -35,7 +35,7 @@ export default function MobileAnnotationMockup() {
                 <div className="text-base font-extrabold text-slate-900">Workspace Hub</div>
               </div>
               <div className="w-8 h-8 rounded-sm bg-sky-500 text-white flex items-center justify-center font-bold text-xs shadow-sm shadow-sky-500/30">
-                NX
+                NW
               </div>
             </div>
 
