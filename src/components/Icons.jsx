@@ -61,6 +61,12 @@ export const IconArrowUpRight = ({ className = "w-5 h-5", ...props }) => (
   </svg>
 );
 
+export const IconPlay = ({ className = "w-5 h-5", ...props }) => (
+  <svg viewBox="0 0 24 24" fill="currentColor" className={className} {...props}>
+    <polygon points="6 4 20 12 6 20 6 4" />
+  </svg>
+);
+
 export const IconCheck = ({ className = "w-5 h-5", ...props }) => (
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className={className} {...props}>
     <polyline points="20 6 9 17 4 12" />
