@@ -3,12 +3,12 @@ import { IconZap, IconShieldCheck, IconLayers, IconTrendingUp, IconCheck } from 
 
 export default function MobileAnnotationMockup() {
   return (
-    <div className="relative w-full max-w-4xl mx-auto py-12 px-4 select-none">
+    <div className="relative w-full max-w-4xl mx-auto py-4 sm:py-12 px-4 select-none">
       {/* Background radial gradient glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[340px] sm:w-[480px] h-[340px] sm:h-[480px] bg-gradient-to-tr from-sky-200/50 via-cyan-100/40 to-blue-200/30 rounded-full blur-3xl -z-10" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[280px] sm:w-[480px] h-[280px] sm:h-[480px] bg-gradient-to-tr from-sky-200/50 via-cyan-100/40 to-blue-200/30 rounded-full blur-3xl -z-10" />
 
       {/* Main Centered Mobile Device */}
-      <div className="relative mx-auto w-[270px] sm:w-[310px] md:w-[340px] z-20">
+      <div className="relative mx-auto w-[255px] sm:w-[310px] md:w-[340px] z-20">
         {/* Smartphone Hardware Frame */}
         <div className="relative rounded-lg bg-slate-900 p-3 shadow-2xl shadow-slate-950/25 border-2 border-slate-800 ring-1 ring-slate-700/50">
           {/* Top Speaker & Dynamic Island */}

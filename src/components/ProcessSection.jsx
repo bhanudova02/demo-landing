@@ -38,35 +38,35 @@ export default function ProcessSection() {
   ];
 
   return (
-    <section id="process" className="py-20 md:py-28 bg-[#f8fafc] border-b border-slate-200/80 scroll-mt-12">
+    <section id="process" className="py-10 sm:py-16 md:py-24 bg-[#f8fafc] border-b border-slate-200/80 scroll-mt-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16 md:mb-20">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-sm bg-sky-100 text-sky-800 text-xs font-bold uppercase tracking-wider mb-3">
+        <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-14">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-sm bg-sky-100 text-sky-800 text-xs font-bold uppercase tracking-wider mb-2.5">
             <span>Our Process</span>
           </div>
           <h2 className="text-2xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight">
             From idea to launch, without the complexity.
           </h2>
-          <p className="mt-4 text-sm sm:text-base md:text-lg text-slate-600 leading-relaxed">
+          <p className="mt-3 sm:mt-4 text-sm sm:text-base md:text-lg text-slate-600 leading-relaxed">
             A structured, transparent engineering process designed to keep your project on time, on budget, and built to the highest technical standards.
           </p>
         </div>
 
-        {/* Timeline Grid (Horizontal Desktop, Vertical Mobile) */}
+        {/* Timeline Grid (Horizontal Desktop, Compact on Mobile) */}
         <div className="relative">
           
           {/* Horizontal connecting track on desktop (hidden on mobile) */}
           <div className="hidden lg:block absolute top-1/2 -translate-y-12 left-10 right-10 h-0.5 bg-gradient-to-r from-sky-200 via-cyan-300 to-blue-300 -z-0" />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative z-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 relative z-10">
             {steps.map((step, idx) => {
               const Icon = step.icon;
               return (
                 <div
                   key={idx}
-                  className="group relative bg-white rounded-lg p-6 sm:p-7 border border-slate-200 shadow-sm hover:shadow-xl hover:border-sky-300 transition-all duration-300 flex flex-col justify-between hover:-translate-y-1.5"
+                  className="group relative bg-white rounded-lg p-4 sm:p-7 border border-slate-200 shadow-sm hover:shadow-xl hover:border-sky-300 transition-all duration-300 flex flex-col justify-between hover:-translate-y-1"
                 >
                   <div>
                     {/* Header with Step Number & Icon */}

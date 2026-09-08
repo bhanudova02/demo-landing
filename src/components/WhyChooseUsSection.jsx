@@ -50,41 +50,41 @@ export default function WhyChooseUsSection() {
   ];
 
   return (
-    <section id="about" className="py-20 md:py-28 bg-[#f8fafc] border-b border-slate-200/80 scroll-mt-12">
+    <section id="about" className="py-10 sm:py-16 md:py-24 bg-[#f8fafc] border-b border-slate-200/80 scroll-mt-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Split Layout: Left Sticky Info + Right 6 Benefits Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
           
           {/* Left Column (5 cols) */}
           <div className="lg:col-span-5 lg:sticky lg:top-28">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-sm bg-sky-100 text-sky-800 text-xs font-bold uppercase tracking-wider mb-3">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-sm bg-sky-100 text-sky-800 text-xs font-bold uppercase tracking-wider mb-2.5">
               <span>Why Choose Us</span>
             </div>
             <h2 className="text-2xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
               A trusted partner for your digital journey.
             </h2>
-            <p className="mt-5 text-sm sm:text-base md:text-lg text-slate-600 leading-relaxed">
+            <p className="mt-3 sm:mt-5 text-sm sm:text-base md:text-lg text-slate-600 leading-relaxed">
               We don't just build websites and apps. We create reliable digital products that support your business goals.
             </p>
 
             {/* Quick Metrics Bar */}
-            <div className="grid grid-cols-2 gap-4 mt-8 pt-6 border-t border-slate-200">
+            <div className="grid grid-cols-2 gap-4 mt-6 sm:mt-8 pt-4 sm:pt-6 border-t border-slate-200">
               <div>
                 <div className="text-2xl sm:text-3xl font-black text-slate-900 font-mono">99.4%</div>
-                <div className="text-xs text-slate-500 mt-1">Client Satisfaction</div>
+                <div className="text-xs text-slate-500 mt-0.5 sm:mt-1">Client Satisfaction</div>
               </div>
               <div>
                 <div className="text-2xl sm:text-3xl font-black text-sky-600 font-mono">100+</div>
-                <div className="text-xs text-slate-500 mt-1">Digital Products Launched</div>
+                <div className="text-xs text-slate-500 mt-0.5 sm:mt-1">Products Launched</div>
               </div>
             </div>
 
             {/* CTA Buttons (Solid rounded-sm, no gradients) */}
-            <div className="mt-8 flex flex-wrap gap-3">
+            <div className="mt-6 sm:mt-8 flex flex-wrap gap-2.5 sm:gap-3">
               <a
                 href="#contact"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-sm text-xs font-semibold text-white bg-sky-600 hover:bg-sky-500 shadow-sm transition-all hover:scale-[1.02]"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-sm text-xs font-semibold text-white bg-sky-600 hover:bg-sky-500 shadow-sm transition-all"
               >
                 <span>Start a Project</span>
                 <IconArrowRight className="w-3.5 h-3.5" />
@@ -99,18 +99,18 @@ export default function WhyChooseUsSection() {
           </div>
 
           {/* Right Column: 6 Benefits Grid (7 cols) */}
-          <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-5">
+          <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-5">
             {benefits.map((benefit, index) => {
               const Icon = benefit.icon;
               return (
                 <div
                   key={index}
-                  className="bg-white rounded-lg p-6 border border-slate-200 shadow-sm hover:shadow-lg hover:border-sky-300 transition-all duration-300 flex flex-col justify-between hover:-translate-y-1"
+                  className="bg-white rounded-lg p-4 sm:p-6 border border-slate-200 shadow-sm hover:shadow-lg hover:border-sky-300 transition-all duration-300 flex flex-col justify-between hover:-translate-y-1"
                 >
                   <div>
                     {/* Benefit Icon */}
-                    <div className={`w-11 h-11 rounded-sm flex items-center justify-center mb-4 ${benefit.accent} border border-slate-100`}>
-                      <Icon className="w-5 h-5 stroke-[2]" />
+                    <div className={`w-9 h-9 sm:w-11 sm:h-11 rounded-sm flex items-center justify-center mb-3 sm:mb-4 ${benefit.accent} border border-slate-100`}>
+                      <Icon className="w-4 h-4 sm:w-5 sm:h-5 stroke-[2]" />
                     </div>
 
                     {/* Benefit Title */}

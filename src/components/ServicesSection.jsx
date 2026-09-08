@@ -99,11 +99,11 @@ export default function ServicesSection() {
   const CurrentIcon = currentService.icon;
 
   return (
-    <section id="services" className="py-20 md:py-28 bg-[#f8fafc] border-b border-slate-200 scroll-mt-12">
+    <section id="services" className="py-10 sm:py-16 md:py-24 bg-[#f8fafc] border-b border-slate-200 scroll-mt-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Heading */}
-        <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12 md:mb-16">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-sm bg-sky-100 text-sky-800 text-xs font-bold uppercase tracking-wider mb-3">
             <span>Our Core Services</span>
           </div>
@@ -115,8 +115,8 @@ export default function ServicesSection() {
           </p>
         </div>
 
-        {/* Interactive Service Tab Bar (rounded-sm, solid active states) */}
-        <div className="flex flex-wrap items-center justify-center gap-2 mb-10">
+        {/* Interactive Service Tab Bar (Swipeable on mobile, centered on desktop) */}
+        <div className="flex overflow-x-auto no-scrollbar sm:flex-wrap sm:justify-center gap-2 mb-6 sm:mb-10 pb-1 sm:pb-0">
           {services.map((service, index) => {
             const Icon = service.icon;
             const isActive = activeTab === index;
@@ -124,9 +124,9 @@ export default function ServicesSection() {
               <button
                 key={service.id}
                 onClick={() => setActiveTab(index)}
-                className={`flex items-center gap-2 px-4 py-2.5 rounded-sm text-xs sm:text-sm font-semibold transition-all cursor-pointer ${
+                className={`flex items-center gap-2 px-3.5 py-2 sm:px-4 sm:py-2.5 rounded-sm text-xs sm:text-sm font-semibold transition-all cursor-pointer whitespace-nowrap shrink-0 ${
                   isActive
-                    ? 'bg-sky-600 text-white shadow-sm'
+                    ? 'bg-sky-600 text-white shadow-sm ring-2 ring-sky-400/30'
                     : 'bg-white text-slate-700 hover:bg-slate-100 border border-slate-200'
                 }`}
               >
@@ -137,31 +137,31 @@ export default function ServicesSection() {
           })}
         </div>
 
-        {/* Active Service Showcase Box (rounded-lg) */}
-        <div className="bg-white rounded-lg border border-slate-200 shadow-md p-6 sm:p-8 lg:p-10 transition-all duration-300 mb-14">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        {/* Active Service Showcase Box with entrance animation (rounded-lg) */}
+        <div key={activeTab} className="bg-white rounded-lg border border-slate-200 shadow-md p-4 sm:p-8 lg:p-10 transition-all duration-300 mb-8 sm:mb-14 animate-fade-in-up">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10 items-center">
             
             {/* Left Detailed Scope (6 cols) */}
-            <div className="lg:col-span-6 space-y-6">
+            <div className="lg:col-span-6 space-y-4 sm:space-y-6">
               
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
-                  <div className={`w-11 h-11 rounded-sm flex items-center justify-center ${currentService.iconBg} border border-slate-100`}>
+                  <div className={`w-10 h-10 sm:w-11 sm:h-11 rounded-sm flex items-center justify-center ${currentService.iconBg} border border-slate-100 shrink-0`}>
                     <CurrentIcon className="w-5 h-5 stroke-[2]" />
                   </div>
                   <div>
-                    <h3 className="text-xl sm:text-2xl font-bold text-slate-900">
+                    <h3 className="text-lg sm:text-2xl font-bold text-slate-900">
                       {currentService.title}
                     </h3>
-                    <span className="text-xs text-slate-500">Typical Sprint: {currentService.turnaround}</span>
+                    <span className="text-xs text-slate-500">Sprint: {currentService.turnaround}</span>
                   </div>
                 </div>
-                <span className="px-3 py-1 rounded-sm bg-slate-100 text-slate-800 text-xs font-bold border border-slate-200">
+                <span className="px-2.5 py-1 rounded-sm bg-slate-100 text-slate-800 text-[11px] sm:text-xs font-bold border border-slate-200">
                   {currentService.badge}
                 </span>
               </div>
 
-              <p className="text-sm sm:text-base font-medium text-slate-900 leading-snug">
+              <p className="text-xs sm:text-base font-medium text-slate-900 leading-snug">
                 {currentService.headline}
               </p>
 
@@ -171,10 +171,10 @@ export default function ServicesSection() {
 
               {/* What's Included Checklist */}
               <div className="pt-2 border-t border-slate-100">
-                <div className="text-xs uppercase font-bold text-slate-500 tracking-wider mb-3">
+                <div className="text-[11px] sm:text-xs uppercase font-bold text-slate-500 tracking-wider mb-2.5">
                   Key Technical Deliverables:
                 </div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-2.5">
                   {currentService.deliverables.map((item, idx) => (
                     <div key={idx} className="flex items-start gap-2 text-xs text-slate-700">
                       <span className="w-4 h-4 rounded-sm bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0 mt-0.5">
@@ -187,10 +187,10 @@ export default function ServicesSection() {
               </div>
 
               {/* Action Button (rounded-sm) */}
-              <div className="pt-4">
+              <div className="pt-2 sm:pt-4">
                 <a
                   href="#contact"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-sm text-xs font-bold text-white bg-sky-600 hover:bg-sky-500 shadow-sm transition-all hover:scale-[1.02] cursor-pointer"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-sm text-xs font-bold text-white bg-sky-600 hover:bg-sky-500 shadow-sm transition-all active:scale-[0.99] cursor-pointer"
                 >
                   <span>Request Proposal for {currentService.title}</span>
                   <IconArrowRight className="w-3.5 h-3.5" />
@@ -200,7 +200,7 @@ export default function ServicesSection() {
 
             {/* Right Live Image Mockup Frame (6 cols, rounded-lg) */}
             <div className="lg:col-span-6">
-              <div className="rounded-lg overflow-hidden border border-slate-200 shadow-md bg-white group">
+              <div className="rounded-lg overflow-hidden border border-slate-200 shadow-md bg-white">
                 {/* Visual Preview (Clean, uncropped) */}
                 <div className="relative aspect-[16/10] overflow-hidden flex items-center justify-center">
                   <img
@@ -216,8 +216,8 @@ export default function ServicesSection() {
           </div>
         </div>
 
-        {/* 4 Quick Service Cards Grid for Rapid Scanning (rounded-lg) */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {/* 4 Quick Service Cards Grid (Smart 2x2 on mobile, 4-col on desktop) */}
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
           {services.map((service, index) => {
             const Icon = service.icon;
             const isSelected = activeTab === index;
@@ -225,7 +225,7 @@ export default function ServicesSection() {
               <div
                 key={service.id}
                 onClick={() => setActiveTab(index)}
-                className={`rounded-lg p-6 border transition-all duration-300 flex flex-col justify-between cursor-pointer hover:-translate-y-1 ${
+                className={`rounded-lg p-3.5 sm:p-6 border transition-all duration-300 flex flex-col justify-between cursor-pointer hover:-translate-y-1 ${
                   isSelected
                     ? 'bg-white border-sky-500 shadow-md ring-1 ring-sky-500'
                     : 'bg-white border-slate-200 hover:border-slate-300 hover:shadow-sm'

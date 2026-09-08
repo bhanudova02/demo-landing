@@ -29,29 +29,29 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="py-20 md:py-28 bg-[#f8fafc] border-b border-slate-200 scroll-mt-12">
+    <section id="contact" className="py-10 sm:py-16 md:py-24 bg-[#f8fafc] border-b border-slate-200 scroll-mt-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-14 md:mb-18">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-sm bg-sky-100 text-sky-800 text-xs font-bold uppercase tracking-wider mb-3">
+        <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-sm bg-sky-100 text-sky-800 text-xs font-bold uppercase tracking-wider mb-2.5">
             <span>Contact & Estimation</span>
           </div>
           <h2 className="text-2xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight">
             Let's discuss your next project.
           </h2>
-          <p className="mt-4 text-sm sm:text-base md:text-lg text-slate-600 leading-relaxed">
+          <p className="mt-3 sm:mt-4 text-sm sm:text-base md:text-lg text-slate-600 leading-relaxed">
             Tell us about your goals, timeline, and requirements. Our engineering leads will review your specs and send a transparent scope and estimate within 24 hours.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10 items-start">
           
           {/* Left Column: Direct Info & Guarantees (5 cols, rounded-lg) */}
-          <div className="lg:col-span-5 space-y-6">
-            <div className="bg-white rounded-lg p-6 sm:p-8 border border-slate-200 shadow-sm space-y-6">
+          <div className="lg:col-span-5 space-y-4 sm:space-y-6">
+            <div className="bg-white rounded-lg p-4 sm:p-8 border border-slate-200 shadow-sm space-y-4 sm:space-y-6">
               <div>
-                <h3 className="text-lg font-bold text-slate-900 mb-1">
+                <h3 className="text-base sm:text-lg font-bold text-slate-900 mb-1">
                   Direct Engineering Inquiries
                 </h3>
                 <p className="text-xs sm:text-sm text-slate-600">
@@ -117,7 +117,7 @@ export default function ContactSection() {
 
           {/* Right Column: Full Interactive Contact Form (7 cols, rounded-lg) */}
           <div className="lg:col-span-7">
-            <div className="bg-white rounded-lg p-6 sm:p-8 md:p-10 border border-slate-200 shadow-sm">
+            <div className="bg-white rounded-lg p-4 sm:p-8 md:p-10 border border-slate-200 shadow-sm">
               {submitted ? (
                 <div className="py-12 text-center space-y-4">
                   <div className="w-16 h-16 rounded-sm bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto text-2xl font-bold">

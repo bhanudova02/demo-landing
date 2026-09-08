@@ -53,32 +53,32 @@ export default function WorkSection() {
     : projects.filter(p => p.category === activeFilter || p.tags.includes(activeFilter));
 
   return (
-    <section id="work" className="py-20 md:py-28 bg-white border-b border-slate-200 scroll-mt-12">
+    <section id="work" className="py-10 sm:py-16 md:py-24 bg-white border-b border-slate-200 scroll-mt-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 md:mb-16 gap-6">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-6 sm:mb-10 md:mb-16 gap-4 sm:gap-6">
           <div className="max-w-2xl">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-sm bg-sky-100 text-sky-800 text-xs font-bold uppercase tracking-wider mb-3">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-sm bg-sky-100 text-sky-800 text-xs font-bold uppercase tracking-wider mb-2.5">
               <span>Featured Work</span>
             </div>
             <h2 className="text-2xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight">
               Real digital products. Built for real businesses.
             </h2>
-            <p className="mt-4 text-sm sm:text-base md:text-lg text-slate-600">
+            <p className="mt-3 sm:mt-4 text-sm sm:text-base md:text-lg text-slate-600">
               Explore how we help modern organizations transform complex requirements into sleek, performant software applications.
             </p>
           </div>
 
-          {/* Filter Pills (rounded-sm, solid, no gradients) */}
-          <div className="flex flex-wrap gap-2">
+          {/* Filter Pills (Swipeable on mobile, rounded-sm) */}
+          <div className="flex overflow-x-auto no-scrollbar gap-1.5 pb-1 sm:pb-0">
             {filterCategories.map((cat) => (
               <button
                 key={cat}
                 onClick={() => setActiveFilter(cat)}
-                className={`px-4 py-2 rounded-sm text-xs font-semibold transition-all cursor-pointer ${
+                className={`px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-sm text-xs font-semibold transition-all cursor-pointer whitespace-nowrap shrink-0 ${
                   activeFilter === cat
-                    ? 'bg-slate-900 text-white shadow-sm'
+                    ? 'bg-slate-900 text-white shadow-sm ring-1 ring-slate-800'
                     : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
                 }`}
               >
@@ -89,11 +89,11 @@ export default function WorkSection() {
         </div>
 
         {/* 4 Project Cards Grid (rounded-lg, uncropped images) */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div key={activeFilter} className="grid grid-cols-1 lg:grid-cols-2 gap-5 sm:gap-8 animate-fade-in-up">
           {filteredProjects.map((project) => (
             <div
               key={project.id}
-              className="group bg-white rounded-lg border border-slate-200 shadow-sm hover:shadow-xl hover:border-sky-400 transition-all duration-300 overflow-hidden flex flex-col justify-between hover:-translate-y-1.5"
+              className="group bg-white rounded-lg border border-slate-200 shadow-sm hover:shadow-xl hover:border-sky-400 transition-all duration-300 overflow-hidden flex flex-col justify-between hover:-translate-y-1"
             >
               {/* Clean Image Display Box (rounded-t-lg) */}
               <div className="relative aspect-[16/11] bg-slate-100 overflow-hidden flex items-center justify-center border-b border-slate-100">
@@ -105,30 +105,30 @@ export default function WorkSection() {
                 />
               </div>
 
-              {/* Card Details Content */}
-              <div className="p-6 sm:p-7 flex flex-col justify-between flex-1 bg-white">
+              {/* Card Details Content (Compact on mobile) */}
+              <div className="p-4 sm:p-7 flex flex-col justify-between flex-1 bg-white">
                 <div>
-                  <div className="flex items-center justify-between mb-2">
+                  <div className="flex items-center justify-between mb-1.5 sm:mb-2">
                     <span className="text-xs font-bold uppercase tracking-wider text-sky-600">
                       {project.type}
                     </span>
                   </div>
 
-                  <h3 className="text-xl sm:text-2xl font-bold text-slate-900 group-hover:text-sky-600 transition-colors">
+                  <h3 className="text-lg sm:text-2xl font-bold text-slate-900 group-hover:text-sky-600 transition-colors">
                     {project.title}
                   </h3>
 
-                  <p className="mt-3 text-xs sm:text-sm text-slate-600 leading-relaxed">
+                  <p className="mt-2 sm:mt-3 text-xs sm:text-sm text-slate-600 leading-relaxed">
                     {project.description}
                   </p>
                 </div>
 
                 {/* Tags */}
-                <div className="mt-6 pt-5 border-t border-slate-100 flex flex-wrap gap-1.5">
+                <div className="mt-4 sm:mt-6 pt-3.5 sm:pt-5 border-t border-slate-100 flex flex-wrap gap-1.5">
                   {project.tags.map((tag, tIdx) => (
                     <span
                       key={tIdx}
-                      className="px-2.5 py-1 rounded-sm bg-slate-100 text-slate-700 text-[11px] font-medium"
+                      className="px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-sm bg-slate-100 text-slate-700 text-[10px] sm:text-[11px] font-medium"
                     >
                       {tag}
                     </span>

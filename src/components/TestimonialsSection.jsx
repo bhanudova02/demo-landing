@@ -46,38 +46,38 @@ export default function TestimonialsSection() {
   ];
 
   return (
-    <section id="testimonials" className="py-20 md:py-28 bg-[#f8fafc] border-b border-slate-200/80 scroll-mt-12">
+    <section id="testimonials" className="py-10 sm:py-16 md:py-24 bg-[#f8fafc] border-b border-slate-200/80 scroll-mt-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-14 md:mb-18">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-sm bg-sky-100 text-sky-800 text-xs font-bold uppercase tracking-wider mb-3">
+        <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-sm bg-sky-100 text-sky-800 text-xs font-bold uppercase tracking-wider mb-2.5">
             <span>Client Testimonials</span>
           </div>
           <h2 className="text-2xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight">
             Trusted by innovative founders & business leaders.
           </h2>
-          <p className="mt-4 text-sm sm:text-base md:text-lg text-slate-600 leading-relaxed">
+          <p className="mt-3 sm:mt-4 text-sm sm:text-base md:text-lg text-slate-600 leading-relaxed">
             See how our websites, ecommerce platforms, custom dashboards, and mobile applications empower real businesses to grow and succeed.
           </p>
         </div>
 
-        {/* Testimonials 4-Card Grid (rounded-lg) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {/* Testimonials (Swipeable Carousel on Mobile, 4-Col Grid on Desktop) */}
+        <div className="flex overflow-x-auto no-scrollbar snap-x snap-mandatory gap-3.5 pb-2 md:grid md:grid-cols-2 lg:grid-cols-4 md:gap-6 md:overflow-visible">
           {testimonials.map((item, idx) => (
             <div
               key={idx}
-              className="bg-white rounded-lg p-6 sm:p-7 border border-slate-200 shadow-sm hover:shadow-xl hover:border-sky-300 transition-all duration-300 flex flex-col justify-between hover:-translate-y-1.5"
+              className="w-[84vw] sm:w-[320px] md:w-auto shrink-0 snap-center bg-white rounded-lg p-4 sm:p-6 border border-slate-200 shadow-sm hover:shadow-xl hover:border-sky-300 transition-all duration-300 flex flex-col justify-between hover:-translate-y-1"
             >
               <div>
                 {/* Star rating & Category badge */}
-                <div className="flex items-center justify-between mb-4">
-                  <div className="flex text-amber-400 text-sm">
+                <div className="flex items-center justify-between mb-3 sm:mb-4">
+                  <div className="flex text-amber-400 text-xs sm:text-sm">
                     {[...Array(item.rating)].map((_, i) => (
                       <span key={i}>★</span>
                     ))}
                   </div>
-                  <span className="px-2.5 py-0.5 rounded-sm bg-slate-100 text-slate-700 text-[10px] font-bold">
+                  <span className="px-2 py-0.5 rounded-sm bg-slate-100 text-slate-700 text-[10px] font-bold">
                     {item.tag}
                   </span>
                 </div>
@@ -89,8 +89,8 @@ export default function TestimonialsSection() {
               </div>
 
               {/* Author Details */}
-              <div className="pt-6 mt-6 border-t border-slate-100 flex items-center gap-3">
-                <div className={`w-10 h-10 rounded-sm flex items-center justify-center font-bold text-xs ${item.initialsColor} shrink-0 shadow-xs`}>
+              <div className="pt-4 sm:pt-5 mt-4 sm:mt-5 border-t border-slate-100 flex items-center gap-2.5 sm:gap-3">
+                <div className={`w-9 h-9 sm:w-10 sm:h-10 rounded-sm flex items-center justify-center font-bold text-xs ${item.initialsColor} shrink-0 shadow-xs`}>
                   {item.imageInitials}
                 </div>
                 <div className="min-w-0 flex-1">
@@ -110,7 +110,7 @@ export default function TestimonialsSection() {
         </div>
 
         {/* Social Proof Stats Bar (rounded-lg) */}
-        <div className="mt-12 bg-white rounded-lg p-6 border border-slate-200 shadow-sm grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        <div className="mt-8 sm:mt-12 bg-white rounded-lg p-4 sm:p-6 border border-slate-200 shadow-sm grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 text-center">
           <div>
             <div className="text-2xl sm:text-3xl font-black text-slate-900 font-mono">100+</div>
             <div className="text-xs text-slate-500 mt-0.5 font-medium">Projects Shipped</div>

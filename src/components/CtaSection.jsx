@@ -3,14 +3,14 @@ import { IconArrowRight, IconCheck } from './Icons';
 
 export default function CtaSection() {
   return (
-    <section className="py-16 md:py-24 bg-white border-b border-slate-200">
+    <section className="py-10 sm:py-16 md:py-24 bg-white border-b border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Main CTA Card with subtle light-blue background (rounded-lg) */}
-        <div className="relative rounded-lg bg-slate-50 border border-sky-200 p-8 sm:p-12 lg:p-14 shadow-lg overflow-hidden">
+        <div className="relative rounded-lg bg-slate-50 border border-sky-200 p-5 sm:p-10 lg:p-14 shadow-lg overflow-hidden">
           
-          {/* Floating Status Badge (rounded-md) */}
-          <div className="absolute top-6 sm:top-8 right-6 sm:right-8 z-20">
+          {/* Floating Status Badge (hidden on mobile to prevent overlapping) */}
+          <div className="hidden sm:block absolute top-6 sm:top-8 right-6 sm:right-8 z-20">
             <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-md bg-white shadow-md border border-slate-200 text-xs text-slate-800">
               <span className="relative flex h-2.5 w-2.5">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
