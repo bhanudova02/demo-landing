@@ -138,7 +138,7 @@ const Challenges = () => {
           <div className="inline-block bg-black text-white text-xs font-semibold px-3 py-1 rounded-full mb-6">
             BUILT AROUND YOUR BUSINESS
           </div>
-          <h2 className="text-3xl md:text-5xl font-bold text-gray-900 leading-tight">
+          <h2 className="text-3xl md:text-5xl font-bold text-gray-900 leading-tight max-w-2xl mx-auto">
             Where Businesses Lose Time, Leads & Growth
           </h2>
         </div>
