@@ -5,6 +5,10 @@ import Challenges from './components/Challenges';
 import Features from './components/Features';
 import HowItWorks from './components/HowItWorks';
 import Services from './components/Services';
+import Achievements from './components/Achievements';
+import FAQ from './components/FAQ';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -16,6 +20,10 @@ function App() {
       <Features />
       <HowItWorks />
       <Services />
+      <Achievements />
+      <FAQ />
+      <Contact />
+      <Footer />
     </div>
   );
 }
