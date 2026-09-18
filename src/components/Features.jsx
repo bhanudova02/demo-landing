@@ -47,7 +47,7 @@ const Features = () => {
       <div className="max-w-6xl mx-auto px-6">
         
         {/* Header */}
-        <div className="text-center mb-20">
+        <div className="text-center mb-20" data-aos="fade-up">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             Why Choose CodeDale?
           </h2>
@@ -61,7 +61,12 @@ const Features = () => {
           {featuresData.map((item, i) => {
             const Icon = item.icon;
             return (
-              <div key={i} className="flex flex-col items-center">
+              <div
+                key={i}
+                data-aos="fade-up"
+                data-aos-delay={i * 100}
+                className="flex flex-col items-center"
+              >
                 {/* Icon Wrapper */}
                 <div className="mb-6 relative">
                   {/* Subtle background blob/circle to mimic illustration style */}
@@ -83,7 +88,7 @@ const Features = () => {
         </div>
 
         {/* CTA Button */}
-        <div className="mt-20 flex justify-center">
+        <div className="mt-20 flex justify-center" data-aos="fade-up" data-aos-delay="200">
           <button className="bg-[#111] hover:bg-black text-white text-[15px] font-medium px-8 py-3.5 rounded-full shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-0.5">
             Reserve Your Slot
           </button>

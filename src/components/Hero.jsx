@@ -14,7 +14,11 @@ const Hero = () => {
       />
 
       {/* Top Badge */}
-      <div className="bg-white rounded-full px-4 py-2 flex items-center gap-3 shadow-sm border border-gray-100 mb-10 transition-all hover:shadow-md cursor-pointer">
+      <div
+        data-aos="zoom-in"
+        data-aos-duration="600"
+        className="bg-white rounded-full px-4 py-2 flex items-center gap-3 shadow-sm border border-gray-100 mb-10 transition-all hover:shadow-md cursor-pointer"
+      >
         <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
         <span className="text-sm font-medium text-gray-700">WEBSITES · APPS · AUTOMATION</span>
         <ArrowRight className="w-4 h-4 text-gray-400" />
@@ -22,19 +26,31 @@ const Hero = () => {
 
       {/* Main Heading */}
       <div className="text-center max-w-4xl relative z-10 w-full">
-        <h1 className="text-4xl md:text-5xl lg:text-[58px] font-semibold tracking-tight text-gray-900 leading-[1.1] mb-6">
+        <h1
+          data-aos="fade-up"
+          data-aos-delay="100"
+          className="text-4xl md:text-5xl lg:text-[58px] font-semibold tracking-tight text-gray-900 leading-[1.1] mb-6"
+        >
           Build a digital business
           <br />
           that works for
           you.
         </h1>
 
-        <p className="text-base md:text-lg text-gray-500 max-w-2xl mx-auto leading-relaxed mb-10 font-medium">
+        <p
+          data-aos="fade-up"
+          data-aos-delay="200"
+          className="text-base md:text-lg text-gray-500 max-w-2xl mx-auto leading-relaxed mb-10 font-medium"
+        >
           We design and build high-performance websites, custom applications and smart automation systems that help businesses generate more leads, reduce manual work and grow faster.
         </p>
 
         {/* CTAs */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mx-auto">
+        <div
+          data-aos="fade-up"
+          data-aos-delay="300"
+          className="flex flex-col sm:flex-row items-center justify-center gap-4 mx-auto"
+        >
           <button className="bg-gradient-to-r from-blue-600 to-blue-400 hover:from-blue-700 hover:to-blue-500 text-white px-6 py-2.5 rounded-full text-sm font-medium flex items-center gap-2 transition-all shadow-[0_8px_30px_rgba(59,130,246,0.4)] hover:scale-105 hover:shadow-[0_8px_30px_rgba(59,130,246,0.6)] border">
             Start a Project <ArrowRight className="w-4 h-4" />
           </button>
@@ -45,7 +61,11 @@ const Hero = () => {
             Book a 30-Min Call
           </button>
         </div>
-        <p className="text-[13px] text-gray-500 font-medium mt-6">
+        <p
+          data-aos="fade-up"
+          data-aos-delay="400"
+          className="text-[13px] text-gray-500 font-medium mt-6"
+        >
           No-obligation consultation · Fast response
         </p>
       </div>

@@ -6,7 +6,7 @@ const Achievements = () => {
       <div className="max-w-7xl mx-auto px-6">
         
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-16" data-aos="fade-up">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             Our Achievement
           </h2>
@@ -19,7 +19,11 @@ const Achievements = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           
           {/* Card 1 */}
-          <div className="bg-white rounded-[32px] p-4 pb-8 shadow-sm border border-gray-100 flex flex-col">
+          <div
+            data-aos="fade-up"
+            data-aos-delay="100"
+            className="bg-white rounded-[32px] p-4 pb-8 shadow-sm border border-gray-100 flex flex-col"
+          >
             {/* Visual */}
             <div className="bg-[#fcf5ef] rounded-3xl h-64 mb-6 relative overflow-hidden flex flex-col items-center pt-8 px-6 text-center border border-gray-50">
                <div className="bg-white absolute w-[80%] h-full top-6 rounded-t-2xl shadow-sm border border-gray-100 flex flex-col items-center pt-8 z-10">
@@ -49,7 +53,11 @@ const Achievements = () => {
           </div>
 
           {/* Card 2 */}
-          <div className="bg-white rounded-[32px] p-4 pb-8 shadow-sm border border-gray-100 flex flex-col">
+          <div
+            data-aos="fade-up"
+            data-aos-delay="200"
+            className="bg-white rounded-[32px] p-4 pb-8 shadow-sm border border-gray-100 flex flex-col"
+          >
             {/* Visual */}
             <div className="bg-[#fdfdfd] border border-gray-50 rounded-3xl h-64 mb-6 relative flex items-center justify-center overflow-hidden">
                {/* Big 8 */}
@@ -90,7 +98,11 @@ const Achievements = () => {
           </div>
 
           {/* Card 3 */}
-          <div className="bg-white rounded-[32px] p-4 pb-8 shadow-sm border border-gray-100 flex flex-col">
+          <div
+            data-aos="fade-up"
+            data-aos-delay="300"
+            className="bg-white rounded-[32px] p-4 pb-8 shadow-sm border border-gray-100 flex flex-col"
+          >
             {/* Visual */}
             <div className="bg-[#fafbfb] border border-gray-50 rounded-3xl h-64 mb-6 relative overflow-hidden flex flex-col pt-6 px-6">
                 <div className="flex justify-between items-center z-10 mb-8">

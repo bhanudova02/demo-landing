@@ -1,29 +1,15 @@
 import React from 'react';
-import { 
-  Monitor, 
-  Smartphone, 
-  Bot, 
-  BarChart3, 
-  Hexagon, 
-  PenTool, 
-  Palette, 
-  Rocket, 
-  Megaphone 
-} from 'lucide-react';
 
 const services = [
-  { title: 'Web Development', icon: Monitor, color: 'from-blue-400 to-blue-600' },
-  { title: 'App Development', icon: Smartphone, color: 'from-red-400 to-red-600' },
-  { title: 'AI Applications', icon: Bot, color: 'from-purple-400 to-purple-600' },
-  { title: 'Data Driven Products', icon: BarChart3, color: 'from-teal-400 to-teal-600' },
-  { title: 'Blockchain Technology', icon: Hexagon, color: 'from-yellow-400 to-orange-600' },
-  { title: 'UI/UX', icon: PenTool, color: 'from-pink-400 to-rose-600' },
-  { title: 'Logo Designing', icon: Palette, color: 'from-indigo-400 to-indigo-600' },
-  { title: 'Rapid Prototyping and MVPs', icon: Rocket, color: 'from-cyan-400 to-cyan-600' },
-  { title: 'Digital Marketing & SEO', icon: Megaphone, color: 'from-green-400 to-green-600' },
+  { title: 'Web Development', icon: '/icons/Web Development.png', color: 'from-blue-400 to-blue-600' },
+  { title: 'App Development', icon: '/icons/App Development.png', color: 'from-red-400 to-red-600' },
+  { title: 'AI Applications', icon: '/icons/AI Applications.png', color: 'from-purple-400 to-purple-600' },
+  { title: 'UI/UX', icon: '/icons/UIUX.png', color: 'from-pink-400 to-rose-600' },
+  { title: 'Logo Designing', icon: '/icons/Logo Designing.png', color: 'from-indigo-400 to-indigo-600' },
+  { title: 'Digital Marketing & SEO', icon: '/icons/marketing.png', color: 'from-green-400 to-green-600' },
 ];
 
-const StackedIcon = ({ icon: Icon, colorClass }) => {
+const StackedIcon = ({ iconSrc, colorClass }) => {
   return (
     <div className="relative w-32 h-20 mx-auto mb-6 group cursor-pointer">
       {/* Left Back Card */}
@@ -34,7 +20,7 @@ const StackedIcon = ({ icon: Icon, colorClass }) => {
       
       {/* Center Front Card */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-20 h-14 bg-white rounded shadow-lg border border-gray-100 flex items-center justify-center z-10 transition-transform duration-300 group-hover:-translate-y-2 group-hover:scale-110">
-        <Icon className="w-6 h-6 text-gray-800" strokeWidth={1.5} />
+        <img src={iconSrc} alt="service icon" className="w-10 h-10 object-contain" />
       </div>
     </div>
   );
@@ -46,7 +32,7 @@ const Services = () => {
       <div className="max-w-6xl mx-auto px-6">
         
         {/* Header */}
-        <div className="text-center mb-20">
+        <div className="text-center mb-20" data-aos="fade-up">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 tracking-tight">
             Solutions Tailored for Your Growth
           </h2>
@@ -58,8 +44,13 @@ const Services = () => {
         {/* Grid */}
         <div className="grid grid-cols-2 md:grid-cols-3 gap-y-16 gap-x-8 text-center">
           {services.map((item, index) => (
-            <div key={index} className="flex flex-col items-center">
-              <StackedIcon icon={item.icon} colorClass={item.color} />
+            <div
+              key={index}
+              data-aos="fade-up"
+              data-aos-delay={index * 70}
+              className="flex flex-col items-center"
+            >
+              <StackedIcon iconSrc={item.icon} colorClass={item.color} />
               <h3 className="text-[15px] font-semibold text-gray-900">
                 {item.title}
               </h3>

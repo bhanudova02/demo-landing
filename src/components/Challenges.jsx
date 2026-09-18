@@ -134,7 +134,7 @@ const Challenges = () => {
       <div className="max-w-7xl mx-auto px-8">
 
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-16" data-aos="fade-up">
           <div className="inline-block bg-black text-white text-xs font-semibold px-3 py-1 rounded-full mb-6">
             BUILT AROUND YOUR BUSINESS
           </div>
@@ -148,6 +148,8 @@ const Challenges = () => {
           {challengesData.map((item, i) => (
             <div
               key={i}
+              data-aos="fade-up"
+              data-aos-delay={i * 80}
               className="bg-white rounded-3xl p-4 shadow-sm border border-gray-100 group cursor-pointer hover:shadow-md transition-shadow duration-300 flex flex-col"
             >
               {/* Top Visual Area */}

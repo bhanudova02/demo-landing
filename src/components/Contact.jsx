@@ -5,7 +5,10 @@ const Contact = () => {
   return (
     <section className="py-24 bg-white relative">
       <div className="max-w-6xl mx-auto px-6">
-        <div className="bg-[#0f1014] rounded-[40px] p-8 md:p-14 lg:p-16 overflow-hidden relative shadow-xl">
+        <div
+          data-aos="fade-up"
+          className="bg-[#0f1014] rounded-[40px] p-8 md:p-14 lg:p-16 overflow-hidden relative shadow-xl"
+        >
           {/* Background Decorative Elements */}
           <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-600/20 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/3 pointer-events-none"></div>
           <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-purple-600/10 rounded-full blur-[100px] translate-y-1/2 -translate-x-1/3 pointer-events-none"></div>
@@ -13,7 +16,7 @@ const Contact = () => {
           <div className="relative z-10 grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16 items-center">
             
             {/* Left Side: Content */}
-            <div className="lg:col-span-2">
+            <div className="lg:col-span-2" data-aos="fade-right" data-aos-delay="150">
               <h2 className="text-3xl md:text-[40px] font-bold text-white mb-6 leading-tight">
                 Ready to transform <br className="hidden lg:block"/> your digital presence?
               </h2>
@@ -45,7 +48,11 @@ const Contact = () => {
             </div>
 
             {/* Right Side: Form */}
-            <div className="lg:col-span-3 bg-white/[0.03] backdrop-blur-xl border border-white/10 p-6 md:p-8 rounded-[32px]">
+            <div
+              className="lg:col-span-3 bg-white/[0.03] backdrop-blur-xl border border-white/10 p-6 md:p-8 rounded-[32px]"
+              data-aos="fade-left"
+              data-aos-delay="250"
+            >
               <h3 className="text-xl font-semibold text-white mb-6">Send us a message</h3>
               <form className="space-y-4">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

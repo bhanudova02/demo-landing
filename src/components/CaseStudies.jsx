@@ -90,7 +90,11 @@ const CaseStudies = () => {
     <section className="py-6 bg-[#fafafa]">
 
       {/* Embla Carousel */}
-      <div className="overflow-x-hidden w-full py-4 px-2 sm:px-0" ref={emblaRef}>
+      <div
+        data-aos="fade-up"
+        className="overflow-x-hidden w-full py-4 px-2 sm:px-0"
+        ref={emblaRef}
+      >
         <div className="flex">
           {[...cases, ...cases, ...cases].map((item, i) => (
             <div
@@ -147,7 +151,7 @@ const CaseStudies = () => {
       </div>
 
       {/* Dot Navigation — only 5 dots for original cases */}
-      <div className="flex justify-center gap-2 mt-6">
+      <div data-aos="fade-up" data-aos-delay="100" className="flex justify-center gap-2 mt-6">
         {Array.from({ length: 4 }).map((_, idx) => (
           <button
             key={idx}

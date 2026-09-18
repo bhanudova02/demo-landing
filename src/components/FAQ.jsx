@@ -44,7 +44,7 @@ const FAQ = () => {
         <div className="absolute top-0 bottom-0 right-8 md:right-12 w-px border-r border-dashed border-gray-200 pointer-events-none hidden sm:block"></div>
 
         {/* Header */}
-        <div className="text-center mb-16 relative z-10">
+        <div className="text-center mb-16 relative z-10" data-aos="fade-up">
           <h2 className="text-3xl md:text-[34px] font-bold text-gray-900 mb-4 tracking-tight">
             Frequently Asked Questions
           </h2>
@@ -58,7 +58,12 @@ const FAQ = () => {
           {faqData.map((item, index) => {
             const isOpen = openIndex === index;
             return (
-              <div key={index} className="flex flex-col items-end w-full max-w-2xl">
+              <div
+                key={index}
+                data-aos="fade-left"
+                data-aos-delay={index * 80}
+                className="flex flex-col items-end w-full max-w-2xl"
+              >
                 <div 
                   className="flex items-center gap-3 cursor-pointer group"
                   onClick={() => toggleFaq(index)}

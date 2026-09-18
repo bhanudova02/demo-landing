@@ -13,7 +13,11 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 mb-20">
           
           {/* Logo and description (Left column) */}
-          <div className="md:col-span-4 flex flex-col">
+          <div
+            className="md:col-span-4 flex flex-col"
+            data-aos="fade-right"
+            data-aos-delay="0"
+          >
             <div className="flex items-center gap-2 mb-6">
               <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-blue-600">
                 <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM13 19.93V4.07C16.95 4.56 20 7.92 20 12C20 16.08 16.95 19.44 13 19.93ZM4 12C4 7.92 7.05 4.56 11 4.07V19.93C7.05 19.44 4 16.08 4 12Z" fill="currentColor"/>
@@ -27,7 +31,11 @@ const Footer = () => {
           </div>
 
           {/* Links (Middle columns) */}
-          <div className="md:col-span-4 grid grid-cols-2 gap-8">
+          <div
+            className="md:col-span-4 grid grid-cols-2 gap-8"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
             {/* Company */}
             <div>
               <h4 className="font-medium text-gray-900 mb-6">Company</h4>
@@ -65,7 +73,11 @@ const Footer = () => {
           </div>
 
           {/* Newsletter (Right column) */}
-          <div className="md:col-span-4">
+          <div
+            className="md:col-span-4"
+            data-aos="fade-left"
+            data-aos-delay="200"
+          >
             <h4 className="font-medium text-gray-900 mb-6">Newsletter</h4>
             <p className="text-gray-500 text-[14.5px] leading-relaxed mb-6">
               Stay ahead with design & marketing tips and strategies that drive results.
@@ -86,7 +98,11 @@ const Footer = () => {
         </div>
 
         {/* Bottom bar */}
-        <div className="flex flex-col md:flex-row justify-between items-center pt-8 mt-4 text-[14px] text-gray-500">
+        <div
+          className="flex flex-col md:flex-row justify-between items-center pt-8 mt-4 text-[14px] text-gray-500"
+          data-aos="fade-up"
+          data-aos-delay="300"
+        >
           <p>©2025 CodeDale All rights reserved</p>
           <div className="flex gap-6 mt-4 md:mt-0">
             <a href="#" className="hover:text-blue-600 transition-colors">Privacy Policy</a>
