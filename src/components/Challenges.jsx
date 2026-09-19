@@ -3,38 +3,38 @@ import React from 'react';
 const challengesData = [
   {
     tag: 'Problem',
-    title: 'Outdated Digital Presence',
-    description: 'An outdated website can make your business look less credible and turn potential customers away.',
-    iconType: 'phone',
-  },
-  {
-    tag: 'Problem',
-    title: 'Leads Getting Missed',
-    description: 'Enquiries are scattered across WhatsApp, email, forms and spreadsheets, making follow-ups easy to miss.',
+    title: 'Leads Are Scattered',
+    description: 'Leads are scattered across WhatsApp, email and spreadsheets — follow-ups get missed and revenue slips through the cracks.',
     iconType: 'roles',
   },
   {
     tag: 'Problem',
     title: 'Too Much Manual Work',
-    description: 'Your team spends hours repeating tasks that could be handled automatically by software.',
+    description: 'Employees repeatedly perform tasks that software could handle automatically — wasting time and increasing errors.',
     iconType: 'process',
   },
   {
     tag: 'Problem',
+    title: 'Website Doesn\'t Generate Enquiries',
+    description: 'The website exists but doesn\'t convert visitors into leads. It looks fine but isn\'t doing any real business work.',
+    iconType: 'phone',
+  },
+  {
+    tag: 'Problem',
     title: 'Disconnected Tools',
-    description: "Your website, CRM and business tools don't communicate, creating unnecessary work and errors.",
+    description: 'Different business tools don\'t communicate with each other — creating duplicated work, data gaps and frustration.',
     iconType: 'branding',
   },
   {
     tag: 'Problem',
-    title: 'Poor Business Visibility',
-    description: 'Without the right dashboards and systems, it is difficult to see what is happening across your business.',
+    title: 'Leads Getting Missed',
+    description: 'Manual follow-ups cause leads to get missed. Without automation, your team can\'t keep up with every enquiry.',
     iconType: 'visibility',
   },
   {
     tag: 'Problem',
-    title: "Systems That Don't Scale",
-    description: 'Disconnected tools and manual processes become harder to manage as your business grows.',
+    title: 'No Business Visibility',
+    description: 'Business owners don\'t have visibility into their operations — no dashboards, no real-time data, no clear picture.',
     iconType: 'demands',
   },
 ];
@@ -57,18 +57,14 @@ const CardVisual = ({ type }) => {
     case 'roles':
       return (
         <div className="w-full h-full bg-gray-50 flex flex-col items-center justify-center gap-2 overflow-hidden rounded-2xl">
-          {['Frontend Engineer', 'Backend Developer', 'Product Designer', 'Data Scientist'].map((role, i) => (
+          {['WhatsApp', 'Email Inbox', 'Spreadsheets', 'Contact Forms'].map((role, i) => (
             <div
               key={i}
               className={`text-sm font-bold text-gray-400 transition-all duration-500 ${i === 0 ? 'text-gray-800 scale-110' : ''}`}
-              style={{
-                transform: `translateY(0)`,
-              }}
             >
               {role}
             </div>
           ))}
-          {/* Hover effect overlays a blur or sliding effect */}
           <div className="absolute inset-0 bg-gradient-to-b from-transparent to-gray-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
         </div>
       );
@@ -102,7 +98,6 @@ const CardVisual = ({ type }) => {
               style={{ height: `${h}%` }}
             />
           ))}
-          {/* On hover, bars go up */}
           <div className="absolute inset-x-6 bottom-6 flex gap-2 justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             {[60, 85, 50, 100, 75].map((h, i) => (
               <div
@@ -138,9 +133,12 @@ const Challenges = () => {
           <div className="inline-block bg-black text-white text-xs font-semibold px-3 py-1 rounded-full mb-6">
             BUILT AROUND YOUR BUSINESS
           </div>
-          <h2 className="text-3xl md:text-5xl font-bold text-gray-900 leading-tight max-w-2xl mx-auto">
-            Where Businesses Lose Time, Leads & Growth
+          <h2 className="text-3xl md:text-5xl font-bold text-gray-900 leading-tight max-w-3xl mx-auto">
+            Your business shouldn't depend on manual work.
           </h2>
+          <p className="text-gray-500 max-w-2xl mx-auto mt-4 text-[15px] leading-relaxed">
+            If your team is spending hours doing repetitive tasks or customers are struggling with your digital experience, it's time to fix the system.
+          </p>
         </div>
 
         {/* Grid */}

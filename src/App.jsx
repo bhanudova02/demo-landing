@@ -8,6 +8,7 @@ import Challenges from './components/Challenges';
 import Features from './components/Features';
 import HowItWorks from './components/HowItWorks';
 import Services from './components/Services';
+import TechStack from './components/TechStack';
 import Achievements from './components/Achievements';
 import FAQ from './components/FAQ';
 import Contact from './components/Contact';
@@ -31,6 +32,7 @@ function App() {
       <Features />
       <HowItWorks />
       <Services />
+      <TechStack />
       <Achievements />
       <FAQ />
       <Contact />

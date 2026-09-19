@@ -3,28 +3,32 @@ import { Plus, Minus } from 'lucide-react';
 
 const faqData = [
   {
-    question: "Who's behind CodeDale?",
-    answer: "CodeDale is run by a team of passionate developers and designers dedicated to building high-quality digital products."
+    question: "How much does a website or app cost?",
+    answer: "Every project is different. Pricing depends on scope, complexity and the features you need. We provide a clear estimate after understanding your requirements — no surprises, no hidden fees."
   },
   {
-    question: "Do you accept custom requirements?",
-    answer: "Yes, we tailor our solutions to meet your specific business needs and goals."
+    question: "Can you automate our existing business process?",
+    answer: "Yes. We analyse your current workflow, identify what can be automated and build the right solution — whether that's connecting your tools, automating follow-ups or building a custom system."
   },
   {
-    question: "What is your turnaround time?",
-    answer: "Depending on the project scope, we typically deliver within a few weeks. We prioritize speed without compromising quality."
+    question: "Do I need to know exactly what I want?",
+    answer: "Not at all. Many of our clients come to us with a problem, not a solution. We help you figure out what you actually need before any development begins."
   },
   {
-    question: "Do you provide ongoing support?",
-    answer: "Absolutely. We offer maintenance and support packages to ensure your product runs smoothly post-launch."
+    question: "How long does a project usually take?",
+    answer: "A standard business website typically takes 2–4 weeks. Web apps and automation projects vary depending on complexity. We'll give you a realistic timeline upfront after the discovery phase."
   },
   {
-    question: "Can you handle branding and marketing too?",
-    answer: "While our primary focus is on product development, we do have partners and in-house capabilities to assist with brand identity."
+    question: "Can you integrate our existing tools?",
+    answer: "Yes. We work with a wide range of tools including CRMs, payment gateways, messaging platforms, databases and third-party APIs. If it has an API, we can usually connect it."
   },
   {
-    question: "What's your pricing?",
-    answer: "Our pricing is transparent and project-based. We provide clear estimates after understanding your requirements."
+    question: "Do you provide maintenance and support?",
+    answer: "Absolutely. We offer ongoing support and maintenance packages to keep your system running smoothly. We're also available for future improvements as your business grows."
+  },
+  {
+    question: "How do we get started?",
+    answer: "Simply fill out the project form on this page. We'll review your details and get back to you within 24 hours to schedule a free consultation call."
   }
 ];
 
@@ -36,7 +40,7 @@ const FAQ = () => {
   };
 
   return (
-    <section className="py-24 bg-[#f8f9fa] relative border-y border-dashed border-gray-200 overflow-hidden">
+    <section id="faq" className="py-24 bg-[#f8f9fa] relative border-y border-dashed border-gray-200 overflow-hidden">
       <div className="max-w-5xl mx-auto px-6 relative">
         
         {/* Decorative Grid Lines */}
@@ -46,10 +50,10 @@ const FAQ = () => {
         {/* Header */}
         <div className="text-center mb-16 relative z-10" data-aos="fade-up">
           <h2 className="text-3xl md:text-[34px] font-bold text-gray-900 mb-4 tracking-tight">
-            Frequently Asked Questions
+            Questions, answered.
           </h2>
           <p className="text-gray-600 max-w-xl mx-auto text-[15.5px]">
-            We Get It—Curiosity Leads to Success! Got questions? That's a great sign. Here are some
+            Everything you need to know before we start working together.
           </p>
         </div>
 

@@ -3,7 +3,7 @@ import { Mail, MapPin, ArrowRight } from 'lucide-react';
 
 const Contact = () => {
   return (
-    <section className="py-24 bg-white relative">
+    <section id="contact" className="py-24 bg-white relative">
       <div className="max-w-6xl mx-auto px-6">
         <div
           data-aos="fade-up"
@@ -18,10 +18,10 @@ const Contact = () => {
             {/* Left Side: Content */}
             <div className="lg:col-span-2" data-aos="fade-right" data-aos-delay="150">
               <h2 className="text-3xl md:text-[40px] font-bold text-white mb-6 leading-tight">
-                Ready to transform <br className="hidden lg:block"/> your digital presence?
+              Ready to build your <br className="hidden lg:block"/> digital system?
               </h2>
               <p className="text-gray-400 text-[15px] mb-10 leading-relaxed">
-                Whether you have a clear vision or just a spark of an idea, we're here to help you build something extraordinary. Let's start the conversation today.
+                Whether you have a clear vision or just an idea, we're here to help you build the right system. Share a few details and we'll get back to you within 24 hours.
               </p>
               
               <div className="flex flex-col space-y-6">
@@ -31,7 +31,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="text-xs text-gray-500 mb-0.5">Drop us a line</p>
-                    <p className="text-[15px] font-medium text-gray-200">hello@codedale.com</p>
+                     <p className="text-[15px] font-medium text-gray-200">hello@zenvyra.com</p>
                   </div>
                 </div>
                 
@@ -41,7 +41,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="text-xs text-gray-500 mb-0.5">Visit our office</p>
-                    <p className="text-[15px] font-medium text-gray-200">San Francisco, CA</p>
+                     <p className="text-[15px] font-medium text-gray-200">Available Globally · Remote-first</p>
                   </div>
                 </div>
               </div>

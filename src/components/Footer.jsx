@@ -6,7 +6,7 @@ const Footer = () => {
     <footer className="bg-[#f8f9fa] pt-24 pb-10 border-t border-gray-200 relative overflow-hidden">
       {/* Background watermark logo */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[150px] md:text-[220px] font-black text-gray-900/[0.015] select-none pointer-events-none whitespace-nowrap z-0">
-        CodeDale
+        Zenvyra
       </div>
 
       <div className="max-w-6xl mx-auto px-6 relative z-10">
@@ -23,10 +23,10 @@ const Footer = () => {
                 <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM13 19.93V4.07C16.95 4.56 20 7.92 20 12C20 16.08 16.95 19.44 13 19.93ZM4 12C4 7.92 7.05 4.56 11 4.07V19.93C7.05 19.44 4 16.08 4 12Z" fill="currentColor"/>
                 <circle cx="12" cy="12" r="3" fill="white" />
               </svg>
-              <span className="text-xl font-bold text-blue-600 tracking-tight">Code<span className="font-medium">Dale</span></span>
+              <span className="text-xl font-bold text-blue-600 tracking-tight">Zen<span className="font-medium">vyra</span></span>
             </div>
             <p className="text-gray-500 text-[15px] leading-relaxed max-w-[280px]">
-              Strategic web design, and campaigns tailored to drive result and conversions.
+              Websites, applications and automation systems designed to help modern businesses grow.
             </p>
           </div>
 
@@ -36,36 +36,40 @@ const Footer = () => {
             data-aos="fade-up"
             data-aos-delay="100"
           >
-            {/* Company */}
+            {/* Menu */}
             <div>
-              <h4 className="font-medium text-gray-900 mb-6">Company</h4>
+              <h4 className="font-medium text-gray-900 mb-6">Menu</h4>
               <ul className="flex flex-col space-y-4">
-                <li><a href="#" className="text-gray-500 hover:text-blue-600 text-[15px] transition-colors">Services</a></li>
-                <li><a href="#" className="text-gray-500 hover:text-blue-600 text-[15px] transition-colors">Our Work</a></li>
-                <li><a href="#" className="text-gray-500 hover:text-blue-600 text-[15px] transition-colors">Achievements</a></li>
-                <li><a href="#" className="text-gray-500 hover:text-blue-600 text-[15px] transition-colors">FAQs</a></li>
-                <li><a href="#" className="text-gray-500 hover:text-blue-600 text-[15px] transition-colors">Brand</a></li>
-                <li><a href="#" className="text-gray-500 hover:text-blue-600 text-[15px] transition-colors">Contact</a></li>
+                <li><a href="#services" className="text-gray-500 hover:text-blue-600 text-[15px] transition-colors">Services</a></li>
+                <li><a href="#how-it-works" className="text-gray-500 hover:text-blue-600 text-[15px] transition-colors">How It Works</a></li>
+                <li><a href="#why-us" className="text-gray-500 hover:text-blue-600 text-[15px] transition-colors">Why Us</a></li>
+                <li><a href="#faq" className="text-gray-500 hover:text-blue-600 text-[15px] transition-colors">FAQ</a></li>
+                <li><a href="#contact" className="text-gray-500 hover:text-blue-600 text-[15px] transition-colors">Contact</a></li>
               </ul>
             </div>
 
-            {/* Socials */}
+            {/* Connect */}
             <div>
-              <h4 className="font-medium text-gray-900 mb-6">Socials</h4>
+              <h4 className="font-medium text-gray-900 mb-6">Connect</h4>
               <ul className="flex flex-col space-y-4">
                 <li>
-                  <a href="#" className="text-gray-500 hover:text-blue-600 text-[15px] flex items-center group transition-colors">
+                  <a href="mailto:hello@zenvyra.com" className="text-gray-500 hover:text-blue-600 text-[15px] flex items-center group transition-colors">
                     Email <ArrowUpRight size={14} className="ml-1 opacity-50 group-hover:opacity-100 transition-opacity" />
                   </a>
                 </li>
                 <li>
                   <a href="#" className="text-gray-500 hover:text-blue-600 text-[15px] flex items-center group transition-colors">
-                    Instagram <ArrowUpRight size={14} className="ml-1 opacity-50 group-hover:opacity-100 transition-opacity" />
+                    WhatsApp <ArrowUpRight size={14} className="ml-1 opacity-50 group-hover:opacity-100 transition-opacity" />
                   </a>
                 </li>
                 <li>
                   <a href="#" className="text-gray-500 hover:text-blue-600 text-[15px] flex items-center group transition-colors">
                     LinkedIn <ArrowUpRight size={14} className="ml-1 opacity-50 group-hover:opacity-100 transition-opacity" />
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-gray-500 hover:text-blue-600 text-[15px] flex items-center group transition-colors">
+                    Instagram <ArrowUpRight size={14} className="ml-1 opacity-50 group-hover:opacity-100 transition-opacity" />
                   </a>
                 </li>
               </ul>
@@ -80,7 +84,7 @@ const Footer = () => {
           >
             <h4 className="font-medium text-gray-900 mb-6">Newsletter</h4>
             <p className="text-gray-500 text-[14.5px] leading-relaxed mb-6">
-              Stay ahead with design & marketing tips and strategies that drive results.
+              Stay ahead with web, automation & AI tips that help your business grow faster.
             </p>
             <div className="relative">
               <span className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400">@</span>
@@ -103,7 +107,7 @@ const Footer = () => {
           data-aos="fade-up"
           data-aos-delay="300"
         >
-          <p>©2025 CodeDale All rights reserved</p>
+          <p>© 2026 Zenvyra. All rights reserved.</p>
           <div className="flex gap-6 mt-4 md:mt-0">
             <a href="#" className="hover:text-blue-600 transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-blue-600 transition-colors">Terms of Service</a>

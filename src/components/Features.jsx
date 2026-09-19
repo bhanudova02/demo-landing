@@ -11,48 +11,48 @@ import {
 const featuresData = [
   {
     icon: Globe2,
-    title: 'Impact-Driven Solutions',
-    description: 'Every product we build is custom-crafted to create real business impact.',
+    title: 'Business-first thinking',
+    description: 'We start with the business problem instead of forcing you into a technology stack.',
+  },
+  {
+    icon: Lightbulb,
+    title: 'Automation mindset',
+    description: 'We look for repetitive work that can be automated, not just features to build.',
   },
   {
     icon: Rocket,
-    title: 'Fast & Reliable Delivery',
-    description: 'Get high-quality results in days or weeks, not months.',
+    title: 'Scalable foundation',
+    description: 'We build systems that can evolve as your business grows, not one-off fixes.',
+  },
+  {
+    icon: Users,
+    title: 'One team',
+    description: 'Your website, application, integrations and automation, handled by one team.',
   },
   {
     icon: BadgeDollarSign,
     title: 'Transparent & Fair Pricing',
-    description: 'Honest, customized pricing with no hidden fees or surprises.',
-  },
-  {
-    icon: Lightbulb,
-    title: 'Expert Problem Solvers',
-    description: 'We tackle technical and creative challenges with innovative solutions.',
-  },
-  {
-    icon: Users,
-    title: 'Seamless Collaboration',
-    description: 'Clear communication and feedback at every stage of the project.',
+    description: 'Honest, project-based pricing with no hidden fees or surprises.',
   },
   {
     icon: Target,
-    title: 'Direct Access to Top Talent',
-    description: 'Work directly with senior experts—no long-term hiring needed.',
+    title: 'Direct Access to Experts',
+    description: 'Work directly with senior experts — no long-term hiring needed.',
   },
 ];
 
 const Features = () => {
   return (
-    <section className="py-24 bg-[#f8f9fa] relative border-y border-dashed border-gray-200">
+    <section id="why-us" className="py-24 bg-[#f8f9fa] relative border-y border-dashed border-gray-200">
       <div className="max-w-6xl mx-auto px-6">
         
         {/* Header */}
         <div className="text-center mb-20" data-aos="fade-up">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Why Choose CodeDale?
+            We don't just build software. We solve business problems.
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto text-[15px]">
-            Discover the advantages of partnering with a tech team that's built for<br className="hidden md:block" /> results and client success:
+            Discover the advantages of partnering with a team that puts your business goals first.
           </p>
         </div>
 
@@ -69,7 +69,6 @@ const Features = () => {
               >
                 {/* Icon Wrapper */}
                 <div className="mb-6 relative">
-                  {/* Subtle background blob/circle to mimic illustration style */}
                   <div className="absolute inset-0 bg-blue-100 rounded-full blur-xl opacity-50 transform scale-150"></div>
                   <div className="w-16 h-16 bg-white rounded-2xl shadow-sm border border-gray-100 flex items-center justify-center relative z-10 text-blue-600">
                     <Icon className="w-8 h-8" strokeWidth={1.5} />
@@ -89,9 +88,12 @@ const Features = () => {
 
         {/* CTA Button */}
         <div className="mt-20 flex justify-center" data-aos="fade-up" data-aos-delay="200">
-          <button className="bg-[#111] hover:bg-black text-white text-[15px] font-medium px-8 py-3.5 rounded-full shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-0.5">
-            Reserve Your Slot
-          </button>
+          <a
+            href="#contact"
+            className="bg-[#111] hover:bg-black text-white text-[15px] font-medium px-8 py-3.5 rounded-full shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-0.5"
+          >
+            Start a Project →
+          </a>
         </div>
 
       </div>

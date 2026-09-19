@@ -5,7 +5,7 @@ const cases = [
   {
     image: '/images/work_mobile.jpg',
     bgColor: '#fde8d8',
-    description: 'CodeDale built a fintech mobile app for TFS with live account tracking and a rewards referral system.',
+    description: 'Zenvyra built a fintech mobile app for TFS with live account tracking and a rewards referral system.',
     quote: 'Loved building it with you.',
     client: 'Narasimha Reddy',
     role: 'Founder & CEO of TFS',
@@ -14,7 +14,7 @@ const cases = [
   {
     image: '/images/hero_showcase.jpg',
     bgColor: '#ede9fe',
-    description: 'CodeDale built Fluent Pro: an AI-powered English learning platform with instant, personalized feedback for students.',
+    description: 'Zenvyra built Fluent Pro: an AI-powered English learning platform with instant, personalized feedback for students.',
     quote: 'Excited to support your impact.',
     client: 'Sujith Reddy Gopu',
     role: 'Founder of Fluent Pro',
@@ -23,7 +23,7 @@ const cases = [
   {
     image: '/images/work_ecommerce.jpg',
     bgColor: '#dbeafe',
-    description: 'CodeDale built our B2B e-commerce platform with contract-based catalogues, client-specific SKUs, and dynamic discount programs.',
+    description: 'Zenvyra built our B2B e-commerce platform with contract-based catalogues, client-specific SKUs, and dynamic discount programs.',
     quote: 'Proud to ship this together.',
     client: 'Abhishek',
     role: 'Senior Business Analyst at Conquer',
@@ -32,7 +32,7 @@ const cases = [
   {
     image: '/images/work_dashboard.jpg',
     bgColor: '#f3e8ff',
-    description: 'CodeDale revamped payatom.com into a sleek, interactive fintech experience with Spline 3D elements and smooth scroll animations.',
+    description: 'Zenvyra revamped payatom.com into a sleek, interactive fintech experience with Spline 3D elements and smooth scroll animations.',
     quote: 'Seamless payments, global reach.',
     client: 'Aryan',
     role: 'Founder/CEO, PayAtom',
@@ -41,7 +41,7 @@ const cases = [
   {
     image: '/images/work_corporate.jpg',
     bgColor: '#d1fae5',
-    description: 'CodeDale designed and built a real-time patient management dashboard with analytics and appointment scheduling.',
+    description: 'Zenvyra designed and built a real-time patient management dashboard with analytics and appointment scheduling.',
     quote: 'Transformed how we work.',
     client: 'Dr. Priya Sharma',
     role: 'CTO, MedFlow Solutions',
@@ -129,7 +129,7 @@ const CaseStudies = () => {
               <div className="px-4 pt-3 flex justify-end">
                 <div className="text-black group-hover:text-white bg-gray-100 group-hover:bg-[#1a1a1a] text-[12px] font-medium px-4 py-2 rounded-2xl rounded-br-sm max-w-[85%] text-right transition-colors duration-300">
                   {item.quote}
-                  <div className="text-gray-400 text-[10px] mt-0.5">CodeDale</div>
+                  <div className="text-gray-400 text-[10px] mt-0.5">Zenvyra</div>
                 </div>
               </div>
 
