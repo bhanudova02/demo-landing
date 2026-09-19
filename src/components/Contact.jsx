@@ -18,7 +18,6 @@ const Contact = () => {
       name: formData.get('name'),
       email: formData.get('email'),
       phone: formData.get('phone'),
-      enquiryType: formData.get('enquiryType') || 'General Query',
       message: formData.get('message') || '',
     };
 
@@ -106,7 +105,7 @@ const Contact = () => {
                     {errorMessage}
                   </div>
                 )}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                   <div>
                     <input 
                       type="text" 
@@ -133,21 +132,6 @@ const Contact = () => {
                       placeholder="Email Address" 
                       className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3.5 text-[15px] text-white placeholder:text-gray-500 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all"
                     />
-                  </div>
-                  <div>
-                    <select 
-                      name="enquiryType"
-                      required
-                      defaultValue=""
-                      className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3.5 text-[15px] text-white focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all appearance-none"
-                    >
-                      <option value="" disabled className="text-gray-900">Select Enquiry Type</option>
-                      <option value="Online Ecommerce" className="text-gray-900">Online Ecommerce</option>
-                      <option value="Franchise" className="text-gray-900">Franchise</option>
-                      <option value="Distributor" className="text-gray-900">Distributor</option>
-                      <option value="General Query" className="text-gray-900">General Query</option>
-                      <option value="Other" className="text-gray-900">Other</option>
-                    </select>
                   </div>
                 </div>
                 <div>

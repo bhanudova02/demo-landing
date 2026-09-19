@@ -10,7 +10,7 @@ app.use(cors());
 app.use(express.json());
 
 app.post('/api/send-contact', async (req, res) => {
-  const { name, phone, email, enquiryType, message } = req.body;
+  const { name, phone, email, message } = req.body;
 
   try {
     // Configure nodemailer transporter using Gmail
@@ -46,12 +46,6 @@ app.post('/api/send-contact', async (req, res) => {
               <tr>
                 <td style="padding: 14px 0; border-bottom: 1px solid #f3f4f6; color: #6b7280; font-size: 14px; font-weight: 500;">Phone</td>
                 <td style="padding: 14px 0; border-bottom: 1px solid #f3f4f6; color: #111827; font-size: 15px;">${phone || '<span style="color: #9ca3af; font-style: italic;">Not provided</span>'}</td>
-              </tr>
-              <tr>
-                <td style="padding: 14px 0; border-bottom: 1px solid #f3f4f6; color: #6b7280; font-size: 14px; font-weight: 500;">Enquiry Type</td>
-                <td style="padding: 14px 0; border-bottom: 1px solid #f3f4f6; color: #111827; font-size: 15px;">
-                  <span style="background-color: #eff6ff; color: #2563eb; padding: 4px 10px; border-radius: 20px; font-size: 12px; font-weight: 600;">${enquiryType}</span>
-                </td>
               </tr>
             </table>
             
