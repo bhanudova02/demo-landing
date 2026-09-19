@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Lightbulb, MapPin, Settings, Rocket } from 'lucide-react';
 
 const steps = [
@@ -43,6 +43,7 @@ const steps = [
 const HowItWorks = () => {
   const [activeStep, setActiveStep] = React.useState(0);
   const [paused, setPaused] = React.useState(false);
+  const tabBarRef = useRef(null);
   const current = steps[activeStep];
 
   // Auto-advance every 4 seconds
@@ -54,12 +55,16 @@ const HowItWorks = () => {
     return () => clearInterval(timer);
   }, [paused, activeStep]);
 
-  // Auto-scroll active tab into view
+  // Horizontal-only scroll for mobile tab bar (no page scroll)
   useEffect(() => {
+    const container = tabBarRef.current;
     const btn = document.getElementById(`tab-btn-${activeStep}`);
-    if (btn) {
-      btn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
-    }
+    if (!container || !btn) return;
+    const containerLeft = container.getBoundingClientRect().left;
+    const btnLeft = btn.getBoundingClientRect().left;
+    const btnCenter = btnLeft - containerLeft + btn.offsetWidth / 2;
+    const scrollTarget = container.scrollLeft + btnCenter - container.offsetWidth / 2;
+    container.scrollTo({ left: scrollTarget, behavior: 'smooth' });
   }, [activeStep]);
 
   return (
@@ -77,7 +82,7 @@ const HowItWorks = () => {
         </div>
 
         {/* Horizontal Tab Bar — mobile only */}
-        <div className="md:hidden mb-8 -mx-2" data-aos="fade-up" data-aos-delay="50">
+        <div className="md:hidden mb-8 -mx-2" data-aos="fade-up" data-aos-delay="50" ref={tabBarRef}>
           <div className="flex gap-2 overflow-x-auto scrollbar-hide pb-1">
             {steps.map((step, index) => {
               const isActive = activeStep === index;
