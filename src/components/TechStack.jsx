@@ -42,9 +42,9 @@ const categories = [
 
 const stats = [
   { value: 30, suffix: '+', label: 'Brands Served' },
-  { value: 4,  suffix: '',  label: 'Core Services' },
+  { value: 4, suffix: '', label: 'Core Services' },
   { value: 24, suffix: 'h', label: 'First Response' },
-  { value: 100,suffix: '%', label: 'Remote Friendly' },
+  { value: 100, suffix: '%', label: 'Remote Friendly' },
 ];
 
 // Count-up component
@@ -71,7 +71,10 @@ const TechStack = () => {
   const inView = useInView(sectionRef, { once: true, margin: '-80px' });
 
   return (
-    <section ref={sectionRef} className="py-20 bg-[#f8f9fa] relative border-t border-dashed border-gray-200">
+    <section
+      ref={sectionRef}
+      className="py-20 bg-[#f8f9fa] relative border-t border-dashed border-gray-200"
+    >
       <div className="max-w-6xl mx-auto px-6">
 
         {/* ── Header ── */}

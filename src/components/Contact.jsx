@@ -1,7 +1,53 @@
-import React from 'react';
-import { Mail, MapPin, ArrowRight } from 'lucide-react';
+import React, { useState, useRef } from 'react';
+import { Mail, MapPin, ArrowRight, CheckCircle } from 'lucide-react';
 
 const Contact = () => {
+  const form = useRef();
+  const [status, setStatus] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
+  const [showModal, setShowModal] = useState(false);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    setStatus('sending');
+    setErrorMessage('');
+
+    const formData = new FormData(form.current);
+    const data = {
+      name: formData.get('name'),
+      email: formData.get('email'),
+      phone: formData.get('phone'),
+      enquiryType: formData.get('enquiryType') || 'General Query',
+      message: formData.get('message') || '',
+    };
+
+    try {
+      const res = await fetch('/api/send-contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      const result = await res.json();
+
+      if (res.ok && result.success) {
+        setStatus('success');
+        setShowModal(true);
+        form.current.reset();
+      } else {
+        setStatus('error');
+        setErrorMessage(result.message || 'Failed to send message.');
+      }
+    } catch (error) {
+      console.error('Submission error:', error);
+      setStatus('error');
+      setErrorMessage('Network error. Please try again later.');
+    }
+  };
+
   return (
     <section id="contact" className="py-24 bg-white relative">
       <div className="max-w-6xl mx-auto px-6">
@@ -54,33 +100,72 @@ const Contact = () => {
               data-aos-delay="250"
             >
               <h3 className="text-xl font-semibold text-white mb-6">Send us a message</h3>
-              <form className="space-y-4">
+              <form ref={form} onSubmit={handleSubmit} className="space-y-4">
+                {status === 'error' && (
+                  <div className="bg-red-500/10 border border-red-500/50 text-red-400 p-3 rounded-xl text-sm">
+                    {errorMessage}
+                  </div>
+                )}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
                     <input 
                       type="text" 
+                      name="name"
+                      required
                       placeholder="Your Name" 
                       className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3.5 text-[15px] text-white placeholder:text-gray-500 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all"
                     />
                   </div>
                   <div>
                     <input 
+                      type="tel" 
+                      name="phone"
+                      required
+                      placeholder="Phone Number" 
+                      className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3.5 text-[15px] text-white placeholder:text-gray-500 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all"
+                    />
+                  </div>
+                  <div>
+                    <input 
                       type="email" 
+                      name="email"
+                      required
                       placeholder="Email Address" 
                       className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3.5 text-[15px] text-white placeholder:text-gray-500 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all"
                     />
                   </div>
+                  <div>
+                    <select 
+                      name="enquiryType"
+                      required
+                      defaultValue=""
+                      className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3.5 text-[15px] text-white focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all appearance-none"
+                    >
+                      <option value="" disabled className="text-gray-900">Select Enquiry Type</option>
+                      <option value="Online Ecommerce" className="text-gray-900">Online Ecommerce</option>
+                      <option value="Franchise" className="text-gray-900">Franchise</option>
+                      <option value="Distributor" className="text-gray-900">Distributor</option>
+                      <option value="General Query" className="text-gray-900">General Query</option>
+                      <option value="Other" className="text-gray-900">Other</option>
+                    </select>
+                  </div>
                 </div>
                 <div>
                   <textarea 
+                    name="message"
+                    required
                     placeholder="Tell us about your project..." 
                     rows={4}
                     className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3.5 text-[15px] text-white placeholder:text-gray-500 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all resize-none"
                   ></textarea>
                 </div>
-                <button className="w-full bg-blue-600 hover:bg-blue-700 text-white text-[15px] font-medium rounded-xl px-5 py-4 flex items-center justify-center transition-all group">
-                  Submit Inquiry
-                  <ArrowRight size={18} className="ml-2 group-hover:translate-x-1 transition-transform" />
+                <button 
+                  type="submit"
+                  disabled={status === 'sending'}
+                  className="w-full bg-blue-600 hover:bg-blue-700 text-white text-[15px] font-medium rounded-xl px-5 py-4 flex items-center justify-center transition-all group disabled:opacity-70 disabled:cursor-not-allowed"
+                >
+                  {status === 'sending' ? 'Sending...' : 'Submit Inquiry'}
+                  {status !== 'sending' && <ArrowRight size={18} className="ml-2 group-hover:translate-x-1 transition-transform" />}
                 </button>
               </form>
             </div>
@@ -88,6 +173,29 @@ const Contact = () => {
           </div>
         </div>
       </div>
+
+      {/* Thank You Modal */}
+      {showModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
+          <div className="bg-[#1a1b23] border border-white/10 rounded-3xl p-8 max-w-md w-full text-center shadow-2xl relative">
+            <div className="w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-5 text-blue-400">
+              <CheckCircle size={32} />
+            </div>
+            
+            <h3 className="text-2xl font-bold text-white mb-3">Thank You!</h3>
+            <p className="text-gray-400 text-[15px] mb-8 leading-relaxed">
+              Your message has been sent successfully. Our team will get back to you within 24 hours.
+            </p>
+
+            <button
+              onClick={() => setShowModal(false)}
+              className="w-full bg-white/10 hover:bg-white/20 text-white py-3 px-4 rounded-xl transition-colors text-[15px] font-medium"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
     </section>
   );
 };
